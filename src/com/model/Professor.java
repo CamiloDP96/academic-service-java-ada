@@ -17,6 +17,9 @@ public class Professor {
 
     double salary;
 
+    final List<Course> enrolledCourses = new ArrayList<>();
+
+
     final List<Course> coursesToTeach = new ArrayList<>();
 
     public Professor(String id, String name, String email, String phoneNumber) {
@@ -50,6 +53,10 @@ public class Professor {
         if (!coursesToTeach.contains(course)) {
             coursesToTeach.add(course);
         }
+    }
+
+    public void addEnrolledCourses(Course course) {
+        enrolledCourses.add(course);
     }
 
     @Override
